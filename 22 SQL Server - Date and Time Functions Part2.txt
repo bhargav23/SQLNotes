@@ -1,5 +1,5 @@
 --Year wise, Qtr wise, Month wise Total Balance 
-select datepart(yy, doo) as YNo, 
+select 	datepart(yy, doo) as YNo, 
 		'Q'+cast (datepart(QQ, doo) as varchar) as QtrNo, 
 		datename(mm, doo) as MonthNm, Sum(Cbal) as TotalBalance 
 from AMASTER 
