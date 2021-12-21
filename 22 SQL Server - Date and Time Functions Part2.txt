@@ -36,3 +36,17 @@ select DATEADD(YY, -180,2020/3/22)
 SELECT acid, name, cbal,doo as PaidOn, dateadd(mm,1,doo) as DueDate
 from AMASTER
 
+
+SELECT acid, name, cbal,doo as PaidOn, EOMONTH(DOO) as DueDate
+from AMASTER
+
+
+EOMONTH(starting_date , months_to_add );  
+
+Exercise 
+Week-wise no. of accounts opened in last month 
+List the names of account holders who have opened accounts in the last 5 days 
+List Branch-wise, Product-wise TOTAL amount as on last Friday 
+List the Customers, who opened accounts in the first week of last month. 
+How many customers opened accounts in last date of previous Month? 
+
