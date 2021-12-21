@@ -28,3 +28,11 @@ millisecond, ms = Millisecond
 number	Required. The number of interval to add to date. Can be positive (to get dates in the future) or negative (to get dates in the past)
 date	Required. The date that will be modified
 */
+
+select DATEADD(DD, -40,GETDATE())
+select DATEADD(MM, -50,GETDATE())
+select DATEADD(YY, -180,2020/3/22)
+
+SELECT acid, name, cbal,doo as PaidOn, dateadd(mm,1,doo) as DueDate
+from AMASTER
+
