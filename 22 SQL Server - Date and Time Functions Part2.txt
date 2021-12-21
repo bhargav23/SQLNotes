@@ -3,5 +3,5 @@ select 	datepart(yy, doo) as YNo,
 	'Q'+cast (datepart(QQ, doo) as varchar) as QtrNo, 
 	datename(mm, doo) as MonthNm, Sum(Cbal) as TotalBalance 
 FROM AMASTER 
-WHERE BRID = 'BR1'
+WHERE BRID = 'BR1' and datepart(yy,doo) = 2014
 group by datepart(yy, doo), datepart(QQ, doo), datename(mm, doo) 
