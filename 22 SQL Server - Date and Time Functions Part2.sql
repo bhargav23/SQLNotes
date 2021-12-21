@@ -1,4 +1,6 @@
+USE IBANK
 --Year wise, Qtr wise, Month wise Total Balance 
+
 select 	datepart(yy, doo) as YNo, 
 	'Q'+cast (datepart(QQ, doo) as varchar) as QtrNo, 
 	datename(mm, doo) as MonthNm, Sum(Cbal) as TotalBalance 
@@ -40,7 +42,7 @@ from AMASTER
 SELECT acid, name, cbal,doo as PaidOn, EOMONTH(DOO) as DueDate
 from AMASTER
 
-
+/*
 EOMONTH(starting_date , months_to_add );  
 
 Exercise 
@@ -50,4 +52,20 @@ List Branch-wise, Product-wise TOTAL amount as on last Friday
 List the Customers, who opened accounts in the first week of last month. 
 How many customers opened accounts in last date of previous Month? 
 
-End
+*/
+
+--Week-wise no. of accounts opened in last month 
+SELECT * from AMASTER
+
+SELECT DATEPART(ww,DOO) as weeks,COUNT(*) as NoOfAcc
+from AMASTER
+WHERE DATEPART(MM,DOO) = DATEPART(MM,DATEADD(MM,-1,GETDATE())) 
+GROUP BY DATEPART(ww,DOO)
+
+SELECT DATEPART(MM,DOO) as ddd  
+from AMASTER
+WHERE DATEPART(MM,DOO) = DATEPART(MM,DATEADD(MM,-1,GETDATE()))
+
+select DATEADD(MM,-1,GETDATE())
+
+INSERT INTO AMASTER Values(164,'Bhargav','asdf','BR5','SB',DATEADD(MM,-1,GETDATE()),25000,30000,'O')
