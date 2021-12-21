@@ -45,10 +45,11 @@ RID INT NOT NULL Foreign Key references RegionMaster (RID)
 --insert 
 insert into BranchMaster values ('BR1', 'Goa', 'Opp: KLM Mall, Panaji, Goa-677123',2 ) 
 insert into BranchMaster values ('BR2', 'Hyd', 'Hitech City, Hitex, Hyd- 500012', 1 ) 
+insert into BranchMaster values ('BR3', 'Mumbai', 'Andhery East', 2 ) 
 go 
 
 
-DROP TABLE  UserMaster
+--DROP TABLE  UserMaster
 --USER MASTER 
 create table UserMaster (
 UserID int Primary Key, 
