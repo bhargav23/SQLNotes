@@ -1,6 +1,7 @@
 --Year wise, Qtr wise, Month wise Total Balance 
 select 	datepart(yy, doo) as YNo, 
-		'Q'+cast (datepart(QQ, doo) as varchar) as QtrNo, 
-		datename(mm, doo) as MonthNm, Sum(Cbal) as TotalBalance 
-from AMASTER 
+	'Q'+cast (datepart(QQ, doo) as varchar) as QtrNo, 
+	datename(mm, doo) as MonthNm, Sum(Cbal) as TotalBalance 
+FROM AMASTER 
+WHERE BRID = 'BR1'
 group by datepart(yy, doo), datepart(QQ, doo), datename(mm, doo) 
