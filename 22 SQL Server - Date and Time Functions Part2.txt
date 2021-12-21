@@ -50,3 +50,4 @@ List Branch-wise, Product-wise TOTAL amount as on last Friday
 List the Customers, who opened accounts in the first week of last month. 
 How many customers opened accounts in last date of previous Month? 
 
+End
