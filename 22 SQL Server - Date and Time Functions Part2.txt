@@ -5,3 +5,26 @@ select 	datepart(yy, doo) as YNo,
 FROM AMASTER 
 WHERE BRID = 'BR1' and datepart(yy,doo) = 2014
 group by datepart(yy, doo), datepart(QQ, doo), datename(mm, doo) 
+/*
+5) DateAdd()
+It adds/sub days (OR) monts (OR) years
+to the given date and returns the future/past date.
+
+The DATEADD() function adds a time/date interval to a date and then returns the date.
+Syntax
+DATEADD(interval, number, date)
+interval	Required. The time/date interval to add. Can be one of the following values:
+year, yyyy, yy = Year
+quarter, qq, q = Quarter
+month, mm, m = month
+dayofyear, dy, y = Day of the year
+day, dd, d = Day
+week, ww, wk = Week
+weekday, dw, w = Weekday
+hour, hh = hour
+minute, mi, n = Minute
+second, ss, s = Second
+millisecond, ms = Millisecond
+number	Required. The number of interval to add to date. Can be positive (to get dates in the future) or negative (to get dates in the past)
+date	Required. The date that will be modified
+*/
