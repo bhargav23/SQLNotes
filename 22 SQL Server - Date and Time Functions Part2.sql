@@ -70,4 +70,14 @@ select DATEADD(MM,-1,GETDATE())
 
 INSERT INTO AMASTER Values(164,'Bhargav','asdf','BR5','SB',DATEADD(MM,-1,GETDATE()),25000,30000,'O')
 
+/*
+1) Find out the Last month Name? 
+2) Find out the last day of the Current month 
+3) Find out the First day Name of the Current month 
+4) Week-wise no. of accounts opened in last month 
+5) List the names of account holders who have opened accounts in the last 5 days 
+6) List Branch-wise, Product-wise TOTAL amount as on last Friday 
+7) List the Customers, who opened accounts in the first week of last month. 
+8) How many customers opened accounts in last date of previous Month? 
 
+*/
